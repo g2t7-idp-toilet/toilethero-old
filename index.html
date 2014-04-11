@@ -1,0 +1,725 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<title>ToiletHero</title>
+		<meta name="description" content="ToiletHero - Saving your every toilet experience!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Stylesheets -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://plugins.adchsm.me/slidebars/scripts/slidebars/0.9/slidebars.min.css">
+		<link rel="stylesheet" href="http://plugins.adchsm.me/slidebars/slidebars-theme.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<!-- Shims -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		
+		<!-- Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<!-- Favicons -->
+		<link rel="icon"
+			type="image/png"
+			href="images/icons/16.png">
+		<link rel="icon"
+			type="image/png"
+			href="images/icons/32.png"
+			sizes="32x32">
+		<link rel="icon"
+			type="image/png"
+			href="images/icons/48.png"
+			sizes="48x48">
+		<link rel="icon"
+			type="image/png"
+			href="images/icons/64.png"
+			sizes="64x64">
+		
+		<!-- Apple Touch Icons -->
+		<link rel="apple-touch-icon"
+			href="images/icons/152.png"
+			sizes="120x120">
+		<link rel="apple-touch-icon"
+			href="images/icons/120.png"
+			sizes="152x152">
+		<link rel="apple-touch-icon"
+			href="images/icons/76.png"
+			sizes="76x76">
+		<link rel="apple-touch-icon"
+			href="images/icons/114.png"
+			sizes="114x114">
+		<link rel="apple-touch-icon"
+			href="images/icons/57.png"
+			sizes="57x57">
+		<link rel="apple-touch-icon"
+			href="images/icons/144.png"
+			sizes="144x144">
+		<link rel="apple-touch-icon"
+			href="images/icons/72.png"
+			sizes="72x72">
+			
+		<!-- Startup Images -->
+		<!-- iPhone 5, 5S, 5C -->
+		<link href="images/startup/1096.png"
+			media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+			rel="apple-touch-startup-image">
+		
+		<!-- iPhone 4, 4S -->
+		<link href="images/startup/920.png"
+			media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+			rel="apple-touch-startup-image">
+		
+		<!-- Kelvin: hacked and removed the rest of the startup images for prototype -->
+	</head>
+	
+	<body id="top">
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top sb-slide" role="navigation">
+			<!-- Left Control -->
+			<div class="sb-toggle-left navbar-left">
+				<div class="navicon-line"></div>
+				<div class="navicon-line"></div>
+				<div class="navicon-line"></div>
+			</div><!-- /.sb-control-left -->
+			
+			<div class="container">
+				<!-- Logo -->
+				<div id="logo" class="navbar-left">
+					<a id="btn-gohome" href="#"><img src="images/toilethero@2x.png" alt="ToiletHero" width="118" height="40"></a>
+				</div><!-- /#logo -->
+				
+			</div>
+		</nav>
+		
+		<!-- Site -->
+		<div id="sb-site">
+			<div class="container">
+				<div class="row">
+					<div id="content" class="col-xs-12 col-sm-9">	
+
+<div id="startscreen">
+
+	<div class="topstat col-xs-12">
+		<div class="level">
+		Level <span>4</span>
+		</div>
+
+		<div class="building">
+		Singapore Management University <span>School of Information Systems</span>
+		</div>
+	</div>
+	<br class="clearfix" />&nbsp;
+<!--  Carousel - consult the Twitter Bootstrap docs at 
+      http://twitter.github.com/bootstrap/javascript.html#carousel -->
+<div id="toiletCarousel" class="carousel slide"><!-- class of slide for animation -->
+  <div class="carousel-inner">
+  </div><!-- /.carousel-inner -->
+  <!--  Next and Previous controls below
+        href values must reference the id for this carousel -->
+    <a class="carousel-control left" href="#toiletCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#toiletCarousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
+
+	<!-- <div id="current" class="col-xs-12">
+		<div class="toiletpic">
+			<span>Outside Seminar Room 3-1</span>
+		</div>
+	</div> -->
+	<div id="three" class="col-xs-12">
+		<div id="distance" class="statbox">
+		Distance
+		<span>87m</span>
+		</div>
+		<div id="cleanliness" class="statbox">
+		Cleanliness
+		<span><img src="images/cockroach-white.png" /><img src="images/cockroach-white.png" /></span>
+		</div>
+		<div id="queue" class="statbox">
+		Crowd
+		<span><img src="images/man-white.png" /><img src="images/man-white.png" /><img src="images/man-grey.png" /></span>
+		</div>
+
+	</div>
+	<div id="rating" class="col-xs-12">
+		<p>
+			<span id="miniicon"></span>
+			<button id="viewcomments" type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-eye-open"></span>
+				View Comments</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rateModal">
+				<span class="glyphicon glyphicon-star"></span>
+				Rate Toilet
+			</button>
+		</p>
+	</div>
+</div>		
+
+<div id="commentscreen">
+
+	<div class="topstat col-xs-12">
+		<div class="level">
+		Level <span>4</span>
+		</div>
+
+		<div class="building">
+		Singapore Management University <span>School of Information Systems</span>
+		</div>
+	</div>
+	<br class="clearfix" />&nbsp;
+	<ul id="comments">
+		<li class="malecomment comment">
+			<img class="replaceimg" src="images/user7.jpg" class="img-circle" />
+			<span class="replacetxt">
+			<em>Muthu S/O Balakrishnan</em>
+			"I think this is pretty decent."
+						<small>5 mins ago</small>
+			</span>
+		</li>
+		<li class="malecomment comment">
+			<img src="images/user1.jpg" class="img-circle" />
+			<span>
+			<em>John Tan</em>
+			"The cubicle on the far right lacks toilet paper!"
+						<small>17 mins ago</small>
+			</span>
+		</li>
+		<li class="malecomment comment">
+			<img src="images/user2.jpg" class="img-circle" />
+			<span>
+			<em>Michael Lee</em>
+			"My favourite place for taking a dump."
+						<small>23 mins ago</small>
+			</span>
+		</li>
+		<!-- female -->
+		<li class="femalecomment comment">
+			<img class="replaceimg" src="images/user8.jpg" class="img-circle" />
+			<span class="replacetxt">
+			<em>Jenny Sim</em>
+			"I think this is pretty decent."
+						<small>5 mins ago</small>
+			</span>
+		</li>
+		<li class="femalecomment comment">
+			<img src="images/user9.jpg" class="img-circle" />
+			<span>
+			<em>Julian Koh</em>
+			"The cubicle on the far right lacks toilet paper!"
+						<small>17 mins ago</small>
+			</span>
+		</li>
+		<li class="femalecomment comment">
+			<img src="images/user10.jpg" class="img-circle" />
+			<span>
+			<em>Janice Tan</em>
+			"My favourite place for taking a dump."
+						<small>23 mins ago</small>
+			</span>
+		</li>
+	</ul>
+	<div id="friendshere">
+		<span class="count">10 friends were here in the last hour!</span>
+		<ul>
+			<li class="malecomment">
+				<img src="images/user3.jpg" class="img-circle" />
+				<span>Bob</span>
+			</li>
+			<li class="malecomment">
+				<img src="images/user4.jpg" class="img-circle" />
+				<span>Rick</span>
+			</li>
+			<li class="malecomment">
+				<img src="images/user5.jpg" class="img-circle" />
+				<span>Andy</span>
+			</li>
+			<li class="malecomment">
+				<img src="images/user6.jpg" class="img-circle" />
+				<span>Mike</span>
+			</li>
+			<li class="femalecomment">
+				<img src="images/user11.jpg" class="img-circle" />
+				<span>Michelle</span>
+			</li>
+			<li class="femalecomment">
+				<img src="images/user12.jpg" class="img-circle" />
+				<span>Mandy</span>
+			</li>
+			<li class="femalecomment">
+				<img src="images/user13.jpg" class="img-circle" />
+				<span>Miki</span>
+			</li>
+			<li class="femalecomment">
+				<img src="images/user14.jpg" class="img-circle" />
+				<span>Minah</span>
+			</li>
+		</ul>
+	</div>
+</div>		
+
+<div id="mapscreen">
+	<span class="mapinfo">
+	Singapore Management University<br />
+School of Information Systems<br />
+Level 2 Female Toilet<br />
+(Next to the escalators)
+	</span>
+	<div id="viewdirections">
+		<button id="btn-viewdirections" type="button" class="btn btn-primary btn-lg btn-block">View Directions</button>
+	</div>
+</div>
+
+<div id="directionscreen">
+	<span class="mapinfo">
+	Singapore Management University<br />
+School of Information Systems<br />
+Level 2 Female Toilet<br />
+(Next to the escalators)
+	</span>
+	<ul>
+		<li><img src="images/arrow-right.png" /><span>Take the lift<em>from SIS Level 3 to Level B1</em></span></li>
+		<li><img src="images/arrow-up.png" /><span>Continue across <em>the Concourse to SOE</em></span></li>
+		<li><img src="images/arrow-up.png" /><span>Take the lift <em>from SOE Level B1 to Level 2</em></span></li>
+		<li><img src="images/arrow-right.png" /><span>Continue to the side <em>of the escalators</em></span></li>
+		<li><span>Arrived at Toilet</span></li>
+	</ul>
+	<div id="viewindoor">
+		<button id="btn-viewindoor" type="button" class="btn btn-primary btn-lg btn-block">View Indoor Maps</button>
+	</div>
+</div>
+
+					</div><!-- /#content-->
+				
+				
+				</div><!-- /.row -->
+			
+			</div><!-- /.container -->
+		</div><!-- /#sb-site -->
+		
+		<!-- Slidebars -->
+<div class="sb-slidebar sb-left sb-width-custom" data-sb-width="220px">
+	<nav>
+		<ul class="sb-menu">
+			<li><img src="images/toilethero-white@2x.png" alt="Slidebars" width="118" height="40"></li>
+			<li>					
+				<h5>Specify Radius</h5>
+				<div id="radius" class="btn-group">
+					<button id="100m" type="button" class="btn btn-default">100m</button>
+					<button id="200m" type="button" class="btn btn-default">200m</button>
+					<button id="300m" type="button" class="btn btn-default">300m</button>
+				</div>
+			</li>
+			<li>
+				<h5>Search For</h5>
+				<div class="checkbox">
+				  <label>
+				    <input type="checkbox" value="cleanest" />
+				    <span>Cleanest Toilet</span>
+				  </label>
+				  <label>
+				    <input type="checkbox" value="least" />
+				    <span>Least Crowded Toilet</span>
+				  </label>
+				</div>
+			</li>
+			<li>
+				<h5>Toilet Type</h5>
+				<div class="checkbox">
+				  <label>
+				    <input type="checkbox" value="male" />
+				    <span>Male</span>
+				  </label>
+				  <label>
+				    <input type="checkbox" value="female" />
+				    <span>Female</span>
+				  </label>
+				  <label>
+				    <input type="checkbox" value="disabled" />
+				    <span>Wheelchair Friendly</span>
+				  </label>
+				</div>
+			</li>
+			<li><small>&copy; 2014 ToiletHero</small></li>
+		</ul>
+	</nav>
+</div><!-- /.sb-left -->
+<!-- Modal -->
+<div class="modal fade" id="rateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Is this toilet's crowd...</h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-success btn-lg btn-block" data-dismiss="modal" data-toggle="modal" data-target="#rateModal2"><span class="glyphicon glyphicon-user"></span> Empty<span>0 to 2 people</span></button>
+        <button type="button" class="btn btn-warning btn-lg btn-block" data-dismiss="modal" data-toggle="modal" data-target="#rateModal2"><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span> Slightly Crowded<span>3 to 5 people</span></button>
+        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" data-toggle="modal" data-target="#rateModal2"><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span> Super Crowded<span>&gt;5 people</span></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Skip Toilet Rating</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="rateModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Is this toilet cleanliness...</h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-success btn-lg btn-block" data-dismiss="modal" data-toggle="modal" data-target="#rateModal3"><span class="glyphicon glyphicon-leaf"></span> Fresh<span>Spotless, fragrant</span></button>
+        <button type="button" class="btn btn-warning btn-lg btn-block" data-dismiss="modal" data-toggle="modal" data-target="#rateModal3"><span class="glyphicon glyphicon-ok"></span> Fine<span>Reasonable for usage</span></button>
+        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" data-toggle="modal" data-target="#rateModal3"><span class="glyphicon glyphicon-trash"></span> Filthy<span>Totally disgusting and revolting</span></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Skip Toilet Rating</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="rateModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Let us know what you think...</h4>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="3" id="tellus" placeholder="Tell us what you think about this toilet..."></textarea>
+        <div id="janitoralert" class="checkbox">
+			<label>
+				<input type="checkbox"> Send an alert to janitor-on-duty to clean toilet
+			</label>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary gotocomment" data-dismiss="modal">Submit Comment</button>
+      </div>
+    </div>
+  </div>
+</div>
+		<!-- Scripts -->
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		
+		<!-- Slidebars -->
+		<script src="http://plugins.adchsm.me/slidebars/scripts/slidebars/0.9/slidebars.min.js"></script>
+		<script>
+			(function($) {
+				$(document).ready(function() {
+					// Initiate Slidebars
+					$.slidebars();
+					
+					// Slidebars Submenus
+					$('.sb-toggle-submenu').off('click').on('click', function() {
+						$submenu = $(this).parent().children('.sb-submenu');
+						$(this).add($submenu).toggleClass('sb-submenu-active'); // Toggle active class.
+						
+						if ($submenu.hasClass('sb-submenu-active')) {
+							$submenu.slideDown(200);
+						} else {
+							$submenu.slideUp(200);
+						}
+					});
+				});
+			}) (jQuery);
+		</script>
+		
+		
+		
+		<!-- Prettify -->
+		<script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		
+		<!-- Smooth Page Scrolling -->
+		<!-- disabled by kelvin for testing carousel <script>
+			(function($) {
+				$(document).ready(function() {
+					$('a[href^="#"]').on('touchend click', function(e) {
+						e.preventDefault();
+						var id = $(this).attr("href");
+						var offset = 70;
+						var target = $(id).offset().top - offset;
+						
+						$('html, body').animate({scrollTop:target}, 500);
+					});
+				});
+			}) (jQuery);
+		</script> -->
+		
+		<!-- Form Validation -->
+		<script src="http://plugins.adchsm.me/slidebars/scripts/form-validation.js"></script>
+
+		<!-- Kelvin's random stuff -->
+		<script>
+			(function($) {
+				$(document).ready(function() {
+
+					// initial data loading
+					genUrl();
+					$("#sb-site").css( "min-height", "500px" );
+
+					function fillData() {
+						// use these as reference
+					  	$("#distance.statbox span").html($(".item.active").attr('data-distance') + "m");
+					  	$(".topstat .level span").html($(".item.active").attr('data-level'));
+					  	$(".topstat .building span").html($(".item.active").attr('data-building'));
+					  	//alert($(".item.active").attr('data-cleanliness'));
+
+					  	// mini icon
+					  	$("#miniicon img").remove();
+					  	if ($(".item.active").attr('data-gender') == "M") {
+					  		$("#miniicon").append("<img src=\"images/mini-male.png\" />");
+					  		$(".malecomment").show();
+					  		$(".femalecomment").hide();
+					  	} else if ($(".item.active").attr('data-gender') == "F") {
+					  		$("#miniicon").append("<img src=\"images/mini-female.png\" />");
+					  		$(".malecomment").hide();
+					  		$(".femalecomment").show();
+					  	} else {
+					  		$("#miniicon").append("<img src=\"images/mini-wc.png\" />");
+					  		$(".malecomment").show();
+					  		$(".femalecomment").hide();
+					  	}
+					  	// the rest of icons
+					  	$("#cleanliness span img").remove();
+					  	$("#queue span img").remove();
+					  	
+					  	if ($(".item.active").attr('data-cleanliness') == "3") {
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-white.png\" />");
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-white.png\" />");
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-white.png\" />");
+					  	} else if ($(".item.active").attr('data-cleanliness') == "2") {
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-white.png\" />");
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-white.png\" />");
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-grey.png\" />");
+					  	} else {
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-white.png\" />");
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-grey.png\" />");
+					  		$("#cleanliness span").append("<img src=\"images/butterfly-grey.png\" />");
+					  	}
+
+					  	if ($(".item.active").attr('data-crowd') == "3") {
+					  		$("#queue span").append("<img src=\"images/man-white.png\" />");
+					  		$("#queue span").append("<img src=\"images/man-white.png\" />");
+					  		$("#queue span").append("<img src=\"images/man-white.png\" />");
+					  	} else if ($(".item.active").attr('data-crowd') == "2") {
+					  		$("#queue span").append("<img src=\"images/man-white.png\" />");
+					  		$("#queue span").append("<img src=\"images/man-white.png\" />");
+					  		$("#queue span").append("<img src=\"images/man-grey.png\" />");
+					  	} else {
+					  		$("#queue span").append("<img src=\"images/man-white.png\" />");
+					  		$("#queue span").append("<img src=\"images/man-grey.png\" />");
+					  		$("#queue span").append("<img src=\"images/man-grey.png\" />");
+					  	}
+
+			  			var niceGender = "";
+						if ($(".item.active").attr('data-gender') == "M") {
+							niceGender = "Male";
+						} else if ($(".item.active").attr('data-gender') == "F") {
+							niceGender = "Female";
+						} else {
+							niceGender = "Disabled";
+						}
+
+						$(".mapinfo").html("Singapore Management University<br />"+ $(".item.active").attr('data-building') +"<br />Level " + $(".item.active").attr('data-level') + " " + niceGender + " Toilet<br />(" + $(".item.active").attr('data-landmark') + ")");
+					}
+
+					// event listener for carousel change
+					$('#toiletCarousel').on('slide.bs.carousel', function () {
+					  //alert($(".item.active").attr('data-distance'));
+					  	fillData();
+					})
+
+
+					// hide all by default except home
+					$("#commentscreen").hide();
+					$("#mapscreen").hide();
+					$("#directionscreen").hide();
+
+					$(".gotocomment").click(function(){
+						//alert("lol");
+						$("#rateModal2").modal('hide');
+						$("#startscreen").hide();
+						$("#commentscreen").show();
+						$("#mapscreen").hide();
+						$("#directionscreen").hide();
+						if ($("#tellus").val() != "") {
+							$(".replacetxt").html("<em>Current User</em>\"" + $("#tellus").val() + "\"<small>Just now</small>");
+								$(".replaceimg").attr("src", "images/userdef.jpg");
+
+						}
+						
+					});
+
+					$("#btn-viewindoor").click(function(){
+						//alert("lol");
+						$("#startscreen").hide();
+						$("#commentscreen").hide();
+						$("#mapscreen").show();
+						$("#directionscreen").hide();
+					});
+
+					$("#btn-viewdirections").click(function(){
+						//alert("lol");
+						$("#startscreen").hide();
+						$("#commentscreen").hide();
+						$("#mapscreen").hide();
+						$("#directionscreen").show();
+					});
+					
+					$(".toiletpic").click(function(){
+						//alert("lol");
+						$("#startscreen").hide();
+						$("#commentscreen").hide();
+						$("#mapscreen").show();
+						$("#directionscreen").hide();
+					});
+
+					$(".sb-menu img").click(function(){
+						$("#startscreen").show();
+						$("#commentscreen").hide();
+						$("#mapscreen").hide();
+						$("#directionscreen").hide();
+					});
+
+					$("#logo").click(function(){
+						$("#startscreen").show();
+						$("#commentscreen").hide();
+						$("#mapscreen").hide();
+						$("#directionscreen").hide();
+					});
+
+					$("#viewcomments").click(function(){
+						$("#startscreen").hide();
+						$("#commentscreen").show();
+						$("#mapscreen").hide();
+						$("#directionscreen").hide();
+					});
+
+
+					$(".carousel").carousel('pause');
+
+
+					// janitor alert
+					$("#janitoralert").hide();	// default
+
+					$("#rateModal2 .btn-success").click(function(){
+						$("#janitoralert").hide();
+					});
+					$("#rateModal2 .btn-warning").click(function(){
+						$("#janitoralert").hide();
+					});
+					$("#rateModal2 .btn-danger").click(function(){
+						$("#janitoralert").show();
+					});
+
+
+					// radio button change listener
+					$("ul.sb-menu input[type=checkbox]").change(function(){
+						//alert("checkbox changed");
+						genUrl();
+					});
+
+					// radius button listener
+					$("#radius button").click(function(){
+						//alert($(this).attr("id"));
+						$("#radius button").removeClass("active");
+						$(this).addClass("active");
+						genUrl();
+					});
+
+					function tapNav() {
+						alert("lol");
+					}
+
+					function genUrl() {
+						// force back to default screen
+						$("#startscreen").show();
+						$("#commentscreen").hide();
+						$("#mapscreen").hide();
+						$("#directionscreen").hide();
+
+						//localhost/test.php?distance=300&gender=MF&crowd=1&cleanliness=1
+						var url_distance = "";
+						if ($("#100m").hasClass("active")) {
+							url_distance ="100";
+						}
+						if ($("#200m").hasClass("active")) {
+							url_distance ="200";
+						}
+						if ($("#300m").hasClass("active")) {
+							url_distance ="300";
+						}
+
+						var url_gender = "";
+						if ($("ul.sb-menu input[type=checkbox][value=male]").prop('checked')) {
+							url_gender += "M";
+						}
+						if ($("ul.sb-menu input[type=checkbox][value=female]").prop('checked')) {
+							url_gender += "F";
+						}
+						if ($("ul.sb-menu input[type=checkbox][value=disabled]").prop('checked')) {
+							url_gender += "D";
+						}
+
+						var url_crowd = "";
+						if ($("ul.sb-menu input[type=checkbox][value=least]").prop('checked')) {
+							url_crowd += "1";
+						}
+
+						var url_cleanliness = "";
+						if ($("ul.sb-menu input[type=checkbox][value=cleanest]").prop('checked')) {
+							url_cleanliness += "1";
+						}
+						
+						var url = "test.php?distance=" + url_distance + "&gender=" + url_gender + "&crowd=" + url_crowd + "&cleanliness=" + url_cleanliness;
+
+						$.getJSON( url, function( data ) {
+							// Populate carousel
+							$("div.carousel-inner div.item").remove();	// wipe em out yoz
+
+							$.each(data, function(index, data){
+								//alert(data.distance);
+								var activeClass = "";
+								if (index == 0) {
+									activeClass = " active";
+								}
+
+								var niceBuilding = "";
+
+								if (data.building == "SIS") {
+									niceBuilding = "School of Information Systems";
+								} else if (data.building == "SOE") {
+									niceBuilding = "School of Economics & Social Sciences";
+								}
+
+								$(".carousel-inner").append("<div class=\"item" + activeClass + "\" data-gender=\"" + data.gender + "\" data-building=\"" + niceBuilding + "\" data-level=\"" + data.level + "\" data-distance=\"" + data.distance + "\" data-cleanliness=\"" + data.cleanliness + "\" data-crowd=\"" + data.crowd + "\" data-landmark=\"" + data.landmark + "\"><img src=\"" + "images/toiletpics/"+ data.url + "\" alt=\"\" /><div class=\"carousel-caption\"><p>" + data.landmark + "<br /><button type=\"button\" class=\"tapnav btn btn-info\">Tap to navigate here</button></p></div></div>");
+
+							});
+
+							$(".tapnav").click(function(){
+								//alert("lol");
+								$("#startscreen").hide();
+								$("#commentscreen").hide();
+								$("#mapscreen").show();
+								$("#directionscreen").hide();
+							});
+
+							fillData();	// fill data for current slide
+						});
+					}
+
+				});
+			}) (jQuery);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,520 @@
+html, body {
+	background-color: #222222;
+}
+
+#sb-site {
+	box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); /* Shadow cast onto the slidebars when opened. */
+	padding: 70px 0 30px 0; /* hacked from 80px to 70px */
+	background-image: url('../images/bg.png');
+}
+
+#adverts {
+	margin-top: 20px;
+}
+
+.advert {
+	border-radius: 3px;
+	border: 1px solid #727272;
+	margin-bottom: 10px;
+	padding: 3px;
+}
+
+.navbar {
+	box-shadow: /* Shadow beneath the bar and edge highlights. */
+		/* Layered single pixel shadows to create a one sided shadow effect. */
+		0 5px 0 0 rgba(0, 0, 0, 0.01),
+		0 4px 0 0 rgba(0, 0, 0, 0.02),
+		0 3px 0 0 rgba(0, 0, 0, 0.04),
+		0 2px 0 0 rgba(0, 0, 0, 0.06),
+		0 1px 0 0 rgba(0, 0, 0, 0.08),
+		/* Top highlight */
+		0 1px 0 0 rgba(255, 255, 255, 0.1) inset,
+		/* Left highlight */
+		1px 0 0 0 rgba(255, 255, 255, 0.1) inset,
+		/* Right highlight */
+		-1px 0 0 0 rgba(255, 255, 255, 0.1) inset,
+		/* Bottom lowlight */
+		0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+		
+	/* Glass gradient overlay. */
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.05) 50%, rgba(0,0,0, 0.02) 51%); /*  Webkit syntax. */
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.02) 51%); /* Final syntax. */
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+	/* Bootstrap Changes */
+	border: none;
+	width: 100%;
+	left: auto;
+	right: auto;
+}
+
+.sb-android .navbar {
+	position: absolute;
+}
+
+#logo {
+	margin-top: 4px;
+	text-align: center;
+}
+
+#logo img {
+	margin-left: -40px;
+}
+
+#top-arrow {
+	padding-top: 17px;
+	padding-bottom: 13px;
+}
+
+.navbar .sb-toggle-left {
+	width: 58px;
+	float: left;
+	padding: 14px;
+}
+
+.navbar .sb-toggle-right {
+	width: 58px;
+	float: right;
+	padding: 14px;
+}
+
+.sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close {
+	cursor: pointer;
+}
+
+.sb-right {
+	margin-top: 50px;
+}
+
+.navicon-line {
+	width: 24px;
+	height: 4px;
+	border-radius: 1px;
+	margin-bottom: 3px;
+	background-color: #fff;
+}
+
+ul.navbar-nav {
+	display: none;
+}
+
+footer {
+	margin-top: 30px;
+}
+
+/* Slidebars */
+
+.sb-slidebar {
+	background-color: #222222;
+}
+
+/* Left */
+
+
+.sb-menu li .sb-open-right, .sb-menu li small {
+	display: inline-block;
+	padding: 14px;
+}
+
+.sb-menu li img {
+	margin: 14px;
+}
+
+/* Right */
+aside#about-me {
+	padding: 14px 14px 64px 14px;
+}
+
+img.img-me {
+	margin: 14px auto;
+	border: 4px solid #fff;
+}
+
+/* Slidebar Type */
+
+.sb-slidebar, .sb-slidebar h3 {
+	color: #F0F0F0;
+}
+
+.sb-slidebar ul.sb-nav li a {
+	color: #DEDEDE;
+}
+
+.sb-slidebar ul.sb-nav li a:hover {
+	color: #C7C7C7;
+	text-decoration: none;
+}
+
+.sb-slidebar ul.sb-nav li span:hover {
+	color: #C7C7C7;
+}
+
+/* Anchor Links */
+#download, #api, #options, #helper-classes {
+	margin-top: -50px;
+	padding-top: 50px;
+}
+
+/* Helper Classes */
+.add-bottom-margin {
+	margin-bottom: 15px;
+}
+
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+
+.add-top-margin {
+	margin-top: 15px;
+}
+
+.no-top-margin {
+	margin-top: 0;
+}
+
+.push-down {
+	position: relative;
+	top: 2px;
+}
+
+@media (min-width: 768px) {
+	ul.navbar-nav {
+		display: block;
+	}
+	
+	#logo {
+		text-align: left;
+	}
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+/* Kelvin's hacks */
+ul.sb-menu li .btn-group {
+	width: 100%;
+}
+ul.sb-menu li h5 {
+	background-color: #656565;
+	padding: 10px 10px;
+	color: #dadada;
+}
+ul.sb-menu li label {
+	display: block;
+}
+
+/* checkbox hacks */
+ul.sb-menu li label span {
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+}
+
+ul.sb-menu li .checkbox {
+	padding-left: 0;
+}
+
+ul.sb-menu li input[type=checkbox] {
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+:checked + span {
+	font-weight: bold;
+    background-color: #333;
+}
+
+.level {
+	width: 20%;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	background-color: #fbac36;
+	float: left;
+	height: 75px;
+}
+
+.level span {
+	display: block;
+	line-height: 0.95em;
+	font-size: 2.5em;
+}
+
+.building {
+	width: 79%;
+	color: #fff;
+	padding: 10px 5px;
+	text-align: center;
+	background-color: #fbac36;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	float: right;
+	height: 75px;
+}
+
+.building span {
+	display: block;
+	line-height: 1em;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#startscreen #three, #startscreen #current, .topstat {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#startscreen #three .statbox {
+	width: 33%;
+	float: left;
+	margin-right: 1%;
+	background-color: #7d7d7d;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	max-height: 6em;
+}
+
+/* dirty cheat */
+#startscreen #three .statbox:last-child {
+	margin-right: 0%;
+	width: 32%;
+}
+
+#startscreen #three .statbox {
+	height: 75px !important;
+}
+
+#startscreen #three .statbox span {
+	display: block;
+}
+
+#startscreen #three #distance span {
+	font-size: 2em;
+	line-height: 1em;
+	padding: 10px;
+}
+
+#startscreen #three #cleanliness img {
+	padding: 5px;
+	height: 3.3em;
+}
+
+#startscreen #three #queue img {
+	padding: 5px;
+	height: 3.3em;
+}
+
+#startscreen #current .toiletpic {
+	background-image: url('../images/entrance1.jpg');
+	background-position: right; 
+	height: 12em;
+}
+
+#startscreen #current .toiletpic span {
+	font-weight: bold;
+	display: block;
+	padding: 10px;
+	width: 100%;
+	background:rgba(255,255,255,0.5);
+}
+
+#startscreen #rating {
+	margin-top: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#rateModal button span, #rateModal2 button span {
+	display: block;
+	font-size: 0.7em;
+}
+
+#rateModal button span.glyphicon, #rateModal2 button span.glyphicon {
+	display: inline;
+}
+
+ul#comments, #friendshere ul {
+	list-style: none;
+	padding-left: 0;
+	display: block;
+	float: left;
+}
+
+ul#comments li.comment {
+	float: left;
+	margin-bottom: 10px;
+}
+ul#comments li.comment img {
+	display: block;
+	width: 20%;
+	float: left;
+}
+
+ul#comments li.comment em {
+	display: block;
+	font-weight: bold;
+}
+
+ul#comments li.comment span {
+	display: block;
+	width: 80%;
+	float: left;
+	padding-left: 10px;
+}
+
+ul#comments li.comment span small {
+	display: block;
+}
+
+#friendshere span.count {
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	border-bottom: 2px solid #000;
+	margin-bottom: 10px;
+}
+
+#friendshere ul li {
+	display: block;
+	float: left;
+	width: 25%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#friendshere ul li img {
+	width: 100%;
+}
+
+#friendshere ul li span {
+	text-align: center;
+	display: block;
+}
+
+#mapscreen {
+	background-image: url('../images/animated.gif');
+	background-position: center; 
+	height: 33em;
+}
+
+.mapinfo {
+	font-weight: bold;
+	display: block;
+	padding: 10px;
+	width: 100%;
+	background:rgba(255,255,255,0.5);	
+}
+
+#mapscreen div#viewdirections {
+	margin-top: 21.5em;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#directionscreen div#viewindoor {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#directionscreen {
+	height: 33em;
+}
+
+#directionscreen ul {
+	list-style: none;
+	float: left;
+	padding-left: 15px;
+}
+
+#directionscreen ul li {
+	display: block;
+	width: 20em;
+	float: left;
+	margin-bottom: 8px;
+}
+
+#directionscreen ul li img {
+	width: 4em;
+	float: left;
+	display: block;
+}
+
+#directionscreen ul li span {
+	display: block;
+	float: left;
+	padding: 10px;
+	font-weight: bold;
+}
+
+#directionscreen ul li em {
+	display: block;
+	font-weight: normal;
+}
+
+#directionscreen .distance {
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#directionscreen .distance strong {
+	font-size: 3.8em;
+	display: block;
+}
+
+/* more dirty hacks */
+
+.carousel-inner{
+  width:100%;
+  max-height: 260px !important;
+  min-height: 260px !important;
+  margin-bottom: 10px;
+}
+
+.carousel-caption {
+	bottom: auto;
+	top: 120px;
+	font-size: 20px;
+}
+
+.carousel-inner div.item img {
+	min-width: 300px;
+	min-height: 300px;
+}
+
+.carousel-control {
+	padding-top: 1em;
+	font-size: 4em;
+}
+
+.modal {
+	margin-top: 6em;
+}
+
+#miniicon img {
+	max-height: 36px;
+	margin-right: 4px;
+}
+
+#radius {
+	padding-left: 8px;
+}
+#radius button {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.navbar-default {
+	background-color: #ff3971;
+	border-color: #ff1859;
+}
